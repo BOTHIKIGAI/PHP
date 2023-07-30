@@ -53,7 +53,7 @@
         echo ("El minimo numero es: ". $minVecNumerico);
         echo("<br>" . "<br>" );
 
-            // 
+            // el numero 
     ?>
 
 </body>

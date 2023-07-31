@@ -7,34 +7,34 @@
 </head>
 <body>
     
-    <!--
-
-        Problema
-            
-            Crear un formulario que lea el nombre del trabajador, los días trabajados, las horas por día y el 
-            costo por hora, con una función que al enviar el formulario se muestren los datos del 
-            trabajador y su salario total.Validar los datos.
-
-        Requisitos 
-
-            - Formulario
-            - Validadción ISSET
-            - Nombre del trabajador, los dias trabajados, horas por dia y el coste por hora
-            - Imprimir en pantalla datos
-
-    -->
+    <!-- Problema -->
 
     <h1>Trabajador y paga</h1>
 
     <form action="" method="post">
-
-        Nombre trabajador: <input type="text" name="nombreTrabajador">;
-        Numero de dias trabajados: <input type="number" name="diasTrabajados">;
-        Horas por dia: <input type="number" name="horasPorDia">;
-        Coste por hora <input type="number" name="costePorHora">;
-        <input type = "submit" value="Enviar">
-
+        Nombre trabajador: <input type="text" name="nombreTrabajador"><br><br>
+        Número de días trabajados: <input type="number" name="diasTrabajados"><br><br>
+        Horas por día: <input type="number" name="horasPorDia"><br><br>
+        Costo por hora: <input type="number" name="costePorHora"><br><br>
+        <input type="submit" value="Enviar">
     </form>
+
+    <?php
+    if (isset($_POST['nombreTrabajador']) && isset($_POST['diasTrabajados']) && isset($_POST['horasPorDia']) && isset($_POST['costePorHora'])) {
+        $nombreTrabajador = $_POST['nombreTrabajador'];
+        $diasTrabajados = $_POST['diasTrabajados'];
+        $horasPorDia = $_POST['horasPorDia'];
+        $costeDia = $_POST['costePorHora'];
+
+        echo "<h2>Resultado:</h2>";
+        echo "El trabajador $nombreTrabajador";
+        echo " trabajó $diasTrabajados días, cada día $horasPorDia horas, con un costo por hora de $costeDia.";
+        $salario = $diasTrabajados * $horasPorDia * $costeDia;
+        echo " Su salario es de $" . $salario;
+    } elseif (isset($_POST['nombreTrabajador']) || isset($_POST['diasTrabajados']) || isset($_POST['horasPorDia']) || isset($_POST['costePorHora'])) {
+        echo "Por favor, complete todos los campos con valores numéricos.";
+    }
+    ?>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-try {
+/* try {
 
 $config_file_path = "archivo.php";
 
@@ -20,5 +20,6 @@ echo $e -> getMessage();
 die();
     // die(); es una funcion que permite el cerrar el codigo
 }
+*/
 
 ?>

@@ -117,25 +117,36 @@
 
         public function calcularIMC($peso, $altura) {
 
-                 // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
-            $imc = $peso / ($altura*$altura);
+            if ($peso <= 0 or $altura <= 0) {
 
-            $resultado1 = 0;
-                // Variable "resultado" es el
+                $resultado1 = 2;
 
-            if ($imc < 20) {
-                $resultado1 = 1;
             }
 
-            elseif ($imc > 20 and $imc < 25) {
-                $resultado1 = 0;
-            }
+            else{
+                
+                $imc = $peso / ($altura*$altura); // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
 
-            else {
-                $resultado1 = -1;
+                if ($imc < 20) {
+                    $resultado1 = -1;
+                }
+    
+                elseif ($imc > 20 and $imc < 25) {
+                    $resultado1 = 0;
+                }
+
+                elseif ($imc >= 25) {
+                    $resultado1 = 2;
+                }
+    
+                else {
+                    $resultado1 = 1;
+                }
+
             }
 
             return $resultado1;
+
         }
 
             // Calcular si es mayor de edad o no
@@ -144,12 +155,23 @@
 
             $resultado2 = ""; // Variable "$resultado2" es la variable en la cual se almacenara un string con el resultado
 
-            if ($edad >= 18) {
-                $resultado2 = "Es mayor de edad";
+            if ($edad <= 0) {
+
+                $resultado2 = "error en saber si es mayor o menor de edad";
+
             }
 
-            else{
-                $resultado2 = "Es menor de edad";
+            else {
+
+                if ($edad >= 18) {
+                    $resultado2 = "es mayor de edad";
+                }
+    
+    
+                else {
+                    $resultado2 = "es menor de edad";
+                }
+
             }
 
             return $resultado2;

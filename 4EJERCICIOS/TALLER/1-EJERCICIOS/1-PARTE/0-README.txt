@@ -19,6 +19,7 @@
 - esMayorDeEdad(): indica si es mayor de edad, devuelve un booleano.
 
 - toString(): devuelve toda la información en string del objeto.
+
 - generaDNI(): genera un número aleatorio de 8 cifras, genera a partir de este su 
     número su letra correspondiente. Este método será invocado cuando se construya 
     el objeto.

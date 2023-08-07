@@ -35,7 +35,9 @@
             <label for="altura">Altura: </label>
             <input type="number" step= "any" id="altura" name="altura" value = 0 placeholder="ingrese altura...">
             <br><br>
+
             <button type="submit" name="enviar" value="enviar">Guardar</button>
+
             <br><br>
 
         </form>
@@ -51,6 +53,8 @@
             $personaSexo = $_POST["sexo"];
             $personaPeso = $_POST["peso"];
             $personaAltura = $_POST["altura"];
+
+            // Primera Persona
 
             $primerPersona = new Persona($personaNombre, $personaEdad, $personaSexo, $personaPeso, $personaAltura);
             echo "<p>Primer persona:</p>";
@@ -81,10 +85,77 @@
             $mayorEdad = $primerPersona -> esMayorDeEdad($personaEdad);
 
             echo "Primera persona " . $mayorEdad;
+            
+            // Segunda Persona
+
+            $segundaPersona = new Persona($personaNombre, $personaEdad, $personaSexo);
+            echo "<p>Segunda persona:</p>";
+            echo $segundaPersona->toString();
+            
+            $imc = $segundaPersona -> calcularIMC($personaPeso, $personaAltura);
+
+            if ($imc == 1) {
+                echo "<p>Segunda persona esta por debajo de su peso ideal</p>";
+            }
+
+            else if ($imc == 0 ) {
+                echo "<p>Segunda persona esta en su peso ideal</p>";
+            }
+
+            else if ($imc == -1) {
+                echo "<p>Segunda persona esta por encima de su peso</p>";
+            } 
+
+            else if ($imc == 2)  {
+                echo "<p>Error en determinar el IMC</p>";
+            }
+
+            else {
+                echo "<p>Error en determinar el IMC</p>";
+            }
+
+            $mayorEdad = $segundaPersona -> esMayorDeEdad($personaEdad);
+
+            echo "Segunda persona " . $mayorEdad;
+
+            // Tercera Persona
+
+            $terceraPersona = new Persona();
+            echo "<p>Tercera persona:</p>";
+            echo $terceraPersona->toString();
+            
+            $imc = $terceraPersona -> calcularIMC($personaPeso, $personaAltura);
+
+            if ($imc == 1) {
+                echo "<p>Tercera persona esta por debajo de su peso ideal</p>";
+            }
+
+            else if ($imc == 0 ) {
+                echo "<p>Tercera persona esta en su peso ideal</p>";
+            }
+
+            else if ($imc == -1) {
+                echo "<p>Tercera persona esta por encima de su peso</p>";
+            } 
+
+            else if ($imc == 2)  {
+                echo "<p>Error en determinar el IMC</p>";
+            }
+
+            else {
+                echo "<p>Error en determinar el IMC</p>";
+            }
+
+            $mayorEdad = $terceraPersona -> esMayorDeEdad($personaEdad);
+
+            echo "Tercera persona " . $mayorEdad;
 
 
         }
 
+        
+        
+        
         ?>
 
     </center>

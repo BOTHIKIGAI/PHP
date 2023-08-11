@@ -125,7 +125,7 @@
 
             else{
                 
-                $imc = $peso / ($altura*$altura); // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
+                $imc = $peso / ($altura**$altura); // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
 
                 if ($imc < 20) {
                     $resultado1 = -1;

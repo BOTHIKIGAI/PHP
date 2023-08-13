@@ -125,7 +125,7 @@
 
             else{
                 
-                $imc = $peso / ($altura**$altura); // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
+                $imc = $peso / ($altura**2); // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
 
                 if ($imc < 20) {
                     $resultado1 = -1;
@@ -178,7 +178,7 @@
             
         }
 
-            // Devolver información
+        // Devolver información
         
         public function toString() {
             echo "Nombre: $this->nombre Edad: $this->edad DNI: $this->DNI Genero: $this->genero Peso: $this->peso Altura: $this->altura";

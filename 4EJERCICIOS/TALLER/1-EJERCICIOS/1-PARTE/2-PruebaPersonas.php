@@ -61,12 +61,17 @@
             // Primera Persona - Creación 
 
             $primerPersona = new Persona($personaNombre, $personaEdad, $personaSexo, $personaPeso, $personaAltura);
-            
 
+            // Crear el primer objeto $primerPersona, este recibira la información del formulario y la asignara en los atributos de la clase
+        
             echo "<p>Primer persona:</p>";
-            echo $primerPersona->toString();
+            echo $primerPersona->toString(); // metodo para imprimir las caracteristicas del objeto
             
-            $imc1 = $primerPersona -> calcularIMC($personaPeso, $personaAltura);
+            $imc1 = $primerPersona -> calcularIMC($primerPersona->getPeso(), $primerPersona->getAltura()); // calcular IMC asignando las variables de la clase
+
+            // El metodo "calcularIMC" retorna un valor entre -1 y 2
+
+            // Inicio el condicional para devolver mediante un echo un mensaje en el cual se determine si su peso es el optimo
 
             if ($imc1 == 1) {
                 echo "<p>Primer persona esta por debajo de su peso ideal</p>";
@@ -88,9 +93,13 @@
                 echo "<p>Error en determinar el IMC</p>";
             }
 
-            $mayorEdad1 = $primerPersona -> esMayorDeEdad($personaEdad);
+
+            $mayorEdad1 = $primerPersona -> esMayorDeEdad($primerPersona ->getEdad());
+
+            // Dentro de la variable "mayorEdad1" almaceno el valor del metodo "esMayorDeEdad"
 
             echo "Primera persona " . $mayorEdad1;
+            
             
             // Segunda Persona
 
@@ -124,7 +133,7 @@
 
             echo "Segunda persona " . $mayorEdad2;
 
-            // Tercera Persona
+            // Tercera Persona 
 
             $terceraPersona = new Persona();
             echo "<p>Tercera persona:</p>";

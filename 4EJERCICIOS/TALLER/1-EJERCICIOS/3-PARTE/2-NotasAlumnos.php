@@ -11,17 +11,17 @@
         // Constructor
 
         public function __construct($nombreAlumno = "", $modalidadEstudio = "", $fichaAlumno = 0, $notasArray = array()) {
-
+            
             parent::__construct($nombreAlumno, $modalidadEstudio, $fichaAlumno);
-
             $this -> notasArray = $notasArray();
-
 
         }
 
         // Get y Set
 
-
+        public function setNotasArray($notasArray) {
+            $this -> notasArray = $notasArray();
+        }
 
         // Metodos 
 

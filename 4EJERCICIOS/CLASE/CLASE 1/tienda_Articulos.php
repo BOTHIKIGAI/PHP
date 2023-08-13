@@ -2,6 +2,7 @@
 require_once "articulo.php";
 
 class Tienda_Articulos {
+
     private $idTienda = 0;
     private $lista = null;
 
@@ -29,5 +30,7 @@ class Tienda_Articulos {
     public function setidTienda($idTienda){
         $this -> idTienda = $idTienda;
     }
+
 }
+
 ?>

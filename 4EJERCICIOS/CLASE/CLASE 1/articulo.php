@@ -1,5 +1,7 @@
 <?php
+
 class articulo{
+    
     private int $codigo = 0;
     private String $nombre = "";
     private float $precio = 0.0;
@@ -34,4 +36,5 @@ class articulo{
         $resp = $this->codigo." ".$this->nombre." ".$this->precio;
         return $resp;
     }
+
 }

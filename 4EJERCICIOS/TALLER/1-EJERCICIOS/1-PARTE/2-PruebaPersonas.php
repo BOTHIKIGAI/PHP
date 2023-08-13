@@ -60,21 +60,21 @@
             echo "<p>Primer persona:</p>";
             echo $primerPersona->toString();
             
-            $imc = $primerPersona -> calcularIMC($personaPeso, $personaAltura);
+            $imc1 = $primerPersona -> calcularIMC($personaPeso, $personaAltura);
 
-            if ($imc == 1) {
+            if ($imc1 == 1) {
                 echo "<p>Primer persona esta por debajo de su peso ideal</p>";
             }
 
-            else if ($imc == 0 ) {
+            else if ($imc1 == 0 ) {
                 echo "<p>Primer persona esta en su peso ideal</p>";
             }
 
-            else if ($imc == -1) {
+            else if ($imc1 == -1) {
                 echo "<p>Primer persona esta por encima de su peso</p>";
             } 
 
-            else if ($imc == 2)  {
+            else if ($imc1 == 2)  {
                 echo "<p>Error en determinar el IMC</p>";
             }
 
@@ -82,31 +82,31 @@
                 echo "<p>Error en determinar el IMC</p>";
             }
 
-            $mayorEdad = $primerPersona -> esMayorDeEdad($personaEdad);
+            $mayorEdad1 = $primerPersona -> esMayorDeEdad($personaEdad);
 
-            echo "Primera persona " . $mayorEdad;
+            echo "Primera persona " . $mayorEdad1;
             
             // Segunda Persona
 
-            $segundaPersona = new Persona($personaNombre, $personaEdad, $personaSexo);
+            $segundaPersona = new Persona("Milan Milanes Cajiao Morera", 2, "M");
             echo "<p>Segunda persona:</p>";
             echo $segundaPersona->toString();
             
-            $imc = $segundaPersona -> calcularIMC($personaPeso, $personaAltura);
+            $imc2 = $segundaPersona -> calcularIMC($segundaPersona->getPeso(),  $segundaPersona->getAltura());
 
-            if ($imc == 1) {
+            if ($imc2 == 1) {
                 echo "<p>Segunda persona esta por debajo de su peso ideal</p>";
             }
 
-            else if ($imc == 0 ) {
+            else if ($imc2 == 0 ) {
                 echo "<p>Segunda persona esta en su peso ideal</p>";
             }
 
-            else if ($imc == -1) {
+            else if ($imc2 == -1) {
                 echo "<p>Segunda persona esta por encima de su peso</p>";
             } 
 
-            else if ($imc == 2)  {
+            else if ($imc2 == 2)  {
                 echo "<p>Error en determinar el IMC</p>";
             }
 
@@ -114,9 +114,9 @@
                 echo "<p>Error en determinar el IMC</p>";
             }
 
-            $mayorEdad = $segundaPersona -> esMayorDeEdad($personaEdad);
+            $mayorEdad2 = $segundaPersona -> esMayorDeEdad($segundaPersona -> getedad());
 
-            echo "Segunda persona " . $mayorEdad;
+            echo "Segunda persona " . $mayorEdad2;
 
             // Tercera Persona
 
@@ -124,21 +124,21 @@
             echo "<p>Tercera persona:</p>";
             echo $terceraPersona->toString();
             
-            $imc = $terceraPersona -> calcularIMC($personaPeso, $personaAltura);
+            $imc3 = $terceraPersona -> calcularIMC($terceraPersona -> getPeso(), $terceraPersona -> getAltura());
 
-            if ($imc == 1) {
+            if ($imc3 == 1) {
                 echo "<p>Tercera persona esta por debajo de su peso ideal</p>";
             }
 
-            else if ($imc == 0 ) {
+            else if ($imc3 == 0 ) {
                 echo "<p>Tercera persona esta en su peso ideal</p>";
             }
 
-            else if ($imc == -1) {
+            else if ($imc3 == -1) {
                 echo "<p>Tercera persona esta por encima de su peso</p>";
             } 
 
-            else if ($imc == 2)  {
+            else if ($imc3 == 2)  {
                 echo "<p>Error en determinar el IMC</p>";
             }
 
@@ -146,9 +146,9 @@
                 echo "<p>Error en determinar el IMC</p>";
             }
 
-            $mayorEdad = $terceraPersona -> esMayorDeEdad($personaEdad);
+            $mayorEdad3 = $terceraPersona -> esMayorDeEdad($terceraPersona -> getedad());
 
-            echo "Tercera persona " . $mayorEdad;
+            echo "Tercera persona " . $mayorEdad3;
 
 
         }

@@ -20,18 +20,22 @@
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" placeholder="ingrese nombre...">
             <br><br>
+
             <label for="edad">Edad: </label>
             <input type="text" id="edad" name="edad" placeholder="ingrese edad...">
             <br><br>
+
             <label for="sexo">Sexo: </label>
             <select name="sexo" id="sexo" name="sexo">
                 <option value="H">Masculino</option>
                 <option value="M">Femenino</option>
             </select>
             <br><br>
+            
             <label for="peso">Peso: </label>
             <input type="number" id="peso" name="peso" value = 0 placeholder="ingrese peso...">
             <br><br>
+
             <label for="altura">Altura: </label>
             <input type="number" step= "any" id="altura" name="altura" value = 0 placeholder="ingrese altura...">
             <br><br>
@@ -100,8 +104,9 @@
 
             echo "Primera persona " . $mayorEdad1;
             
-            
+
             // Segunda Persona
+            // En este objeto asigno los valores de manera manual
 
             $segundaPersona = new Persona("Milan Milanes Cajiao Morera", 2, "M");
             echo "<p>Segunda persona:</p>";
@@ -133,7 +138,8 @@
 
             echo "Segunda persona " . $mayorEdad2;
 
-            // Tercera Persona 
+            // Tercera Persona
+            // En este objeto asigno los valores de manera manual
 
             $terceraPersona = new Persona();
             echo "<p>Tercera persona:</p>";
@@ -165,11 +171,8 @@
 
             echo "Tercera persona " . $mayorEdad3;
 
-
         }
 
-        
-        
         
         ?>
 

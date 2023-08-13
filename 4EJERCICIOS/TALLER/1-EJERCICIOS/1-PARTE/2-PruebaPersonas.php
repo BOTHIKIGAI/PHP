@@ -44,19 +44,25 @@
 
         <?php
 
-        require_once ("1-CLASEpersona.php");
+        require_once ("1-CLASEpersona.php"); // vinculo con la clase persona
+
+        // ISSET para confirmar la entrada de los datos
 
         if (isset($_POST["nombre"]) && isset($_POST["edad"]) && isset($_POST["sexo"]) && isset($_POST["peso"]) && isset($_POST["altura"])) {
             
+            // asignar los resultados de la variable 
+
             $personaNombre = $_POST["nombre"];
             $personaEdad = $_POST["edad"];
             $personaSexo = $_POST["sexo"];
             $personaPeso = $_POST["peso"];
             $personaAltura = $_POST["altura"];
 
-            // Primera Persona
+            // Primera Persona - Creación 
 
             $primerPersona = new Persona($personaNombre, $personaEdad, $personaSexo, $personaPeso, $personaAltura);
+            
+
             echo "<p>Primer persona:</p>";
             echo $primerPersona->toString();
             

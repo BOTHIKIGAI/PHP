@@ -10,9 +10,7 @@
         // Constructor
 
         public function __construct(string $nombreMateria) {
-
             $this -> nombreMateria = $nombreMateria;
-
         }
 
         // Get y set
@@ -45,10 +43,10 @@
             // toString
         public function toString() {
             echo "Materia: " . $this->nombreMateria . "<br>Alumnos:<br><br>";
-            
         }
 
-    }
 
+
+    }
 
 ?>

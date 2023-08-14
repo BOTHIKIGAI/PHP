@@ -1,15 +1,19 @@
 <?php
 
-    class profesoresParteTres {
+    require_once("2-Materia.php");
+
+    class profesoresParteTres extends materiaTercer{
 
         // Atributos
 
-        private $idProfesor;
+        private $idProfesor; // almacenara un identificador para el maestro
         private $nombreProfesore;
         
         // Constructor
 
-        public function __construct(int $idProfesor ,string $nombreProfesore) {
+        public function __construct(int $idProfesor ,string $nombreProfesore, string $nombreMateria) {
+
+            parent::__construct($nombreMateria);
 
             $this -> idProfesor = $idProfesor;
             $this -> nombreProfesore = $nombreProfesore;
@@ -40,7 +44,10 @@
 
             // toString
         public function toString(){
-                echo "Nombre: " . $this->nombreProfesore . " ID: " . $this->idProfesor . "<br>";
+
+            echo "Nombre del maestro: " . $this->nombreProfesore . " ID: " . $this->idProfesor . "<br><br>";
+            parent::toString();
+                
         }
 
 

@@ -1,6 +1,6 @@
 <?php
 
-class articulo{
+class Articulo{
     
     private int $codigo = 0;
     private String $nombre = "";
@@ -33,7 +33,7 @@ class articulo{
         $this -> precio = $precio;
     }
     public function toString(){
-        $resp = $this->codigo." ".$this->nombre." ".$this->precio;
+        $resp = "Id: " . $this->codigo." Nombre del producto: ".$this->nombre." Precio: ".$this->precio;
         return $resp;
     }
 

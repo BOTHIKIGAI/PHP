@@ -12,7 +12,6 @@ class Tienda_Articulos {
         $this -> lista = array();
     }
 
-    
     public function addArticulo (Articulo $arti){
         $this -> lista[] = $arti;
     }

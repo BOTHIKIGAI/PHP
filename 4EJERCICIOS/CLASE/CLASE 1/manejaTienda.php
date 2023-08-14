@@ -20,8 +20,10 @@ $tienda -> addArticulo($art5);
 
 //Mostrar todos los articulos de la lista de la tienda
 
-echo ("Codigo de la tienda: " .$tienda->getidTienda()."<br>");
-foreach($tienda->getlista() as $articulo){
+echo ("Codigo de la tienda: " . $tienda->getidTienda(). "<br>");
+
+foreach($tienda->getlista() as $articulo) {
+
     echo ($articulo->toString()."<br>");
     
 }

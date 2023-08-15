@@ -117,13 +117,13 @@
 
         public function calcularIMC($peso, $altura) {
 
-            if ($peso <= 0 or $altura <= 0) {
+            if ($peso <= 0 or $altura <= 0) { // primero consulto si los datos dados son los correctos
 
-                $resultado1 = 2;
+                $resultado1 = 2; // si los datos datos son menores o iguales retorno un menos 2
 
             }
 
-            else{
+            else{   // si los valores mayores a cero ejecutar calculo variables 
                 
                 $imc = $peso / ($altura**2); // Variable "imc" es la operación mediante la cual se obtiene el valor del "indice de masa corporal"
 

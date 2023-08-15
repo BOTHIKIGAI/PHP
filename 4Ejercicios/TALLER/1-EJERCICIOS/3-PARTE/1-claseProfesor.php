@@ -6,8 +6,8 @@
 
         // Atributos
 
-        private $idProfesor; // almacenara un identificador para el maestro
-        private $nombreProfesore;
+        private $idProfesor; // almacenara un identificador para el maestro en int
+        private $nombreProfesore; // almacenara el nombre del maestro en string
         
         // Constructor
 
@@ -46,11 +46,11 @@
         public function toString(){
 
             echo "Nombre del maestro: " . $this->nombreProfesore . " ID: " . $this->idProfesor . "<br><br>";
+                // Imprimo por pantalla las variables del profesor
             parent::toString();
+                // Imprimo lo que esta relacionada a el, lo cual seria la materia, dentro de materia cuento con el nombre, ID y la lista de estudiantes tambien
                 
         }
-
-
 
 
     }

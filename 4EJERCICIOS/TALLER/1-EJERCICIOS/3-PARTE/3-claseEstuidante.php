@@ -11,9 +11,6 @@
         public $nota1; // almacenara la nota 1
         public $nota2; // almacenara la nota 2
         public $nota3; // almacenara la nno 3
-        public $aprobados = 0;
-        public $desAprobados = 0;
-
 
         // Constructor
         public function __construct(int $idEs, string $NomEs, int $edadEs, string $modaApre, int $n1, int $n2, int $n3) {
@@ -86,22 +83,6 @@
             return $this->nota3;
         }
 
-        public function setAprobados($aprobados) {
-            $this->aprobados = $aprobados;
-        }
-    
-        public function getAprobados() {
-            return $this->aprobados;
-        }
-    
-        public function setDesAprobados($desAprobados) {
-            $this->desAprobados = $desAprobados;
-        }
-    
-        public function getDesAprobados() {
-            return $this->desAprobados;
-        }
-
         // Metodos
 
         // Metodos - toString
@@ -110,6 +91,11 @@
             echo "ID: " . $this->IDestudiante . "<br> Nombre: " . $this->nombreEstudiante . " Edad: " . $this->edadEstudiante . " Modalidad de Aprendizaje: " . $this->modalidadAprendizaje . " Notas: ". $this->nota1 . ", " . $this->nota2 . ", " . $this->nota3 . "<br>";
 
             $notaPromedio = ($this->nota1+$this->nota2+$this->nota3)/3;
+                // obtengo el promedio del alumno
+
+            // lo realizo dentro del echo para conocer directamente, si aprueba o no
+            
+            // Inicio condicionales con el cual depenediendo del valor de su nota retorno un echo que indica si aprueba o no
 
             if ($notaPromedio >= 3) {
                 echo "Aprobado, su nota promedio es: " . number_format($notaPromedio,2) . "<br>";
@@ -123,10 +109,7 @@
                 echo "Error en determinar si <br>";
             }
 
-            
         }
-
-
 
     }
 

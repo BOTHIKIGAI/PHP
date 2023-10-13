@@ -40,11 +40,7 @@
             // Replaces some charactees with some other character in a string
         echo str_replace("world", "Dolly", "Hello world!"); // outputs Hello Dolly!
         echo "<br>";
-
-<<<<<<< HEAD
-=======
         
->>>>>>> 54af0289adf5edf615ab2a0d76c0f0ed9cbd3be1
     ?>
 
 </body>
